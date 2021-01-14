@@ -4247,3 +4247,78 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:15:28.290
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.TretZDQL => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:20.801
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:20.833
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@c62d08a[org.springframework.tooling.boot.ls:1.24.0.202012131915(id=578)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:20.863
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.lsp4e 2 0 2021-01-14 17:23:22.837
+!MESSAGE Timeout waiting for data to generate LS hover
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1950)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2085)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:70)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:163)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:130)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.231
+!MESSAGE Boot LS startup time from start to initialized: 2336ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.351
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.hcmpRxXcisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.387
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.420
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.450
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.482
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.514
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.hcmpRxXc => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.545
+!MESSAGE classpath=51 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.581
+!MESSAGE buffering callback sts4.classpath.hcmpRxXc desafiodb false 51
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.612
+!MESSAGE executing callback sts4.classpath.hcmpRxXc 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:23.666
+!MESSAGE executing callback sts4.classpath.hcmpRxXc SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-14 17:23:39.363
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2021-01-14 17:23:39.405
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:42.832
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.hcmpRxXc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:42.872
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.hcmpRxXc
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:42.907
+!MESSAGE subsribers = {sts4.classpath.ZipaJlfg=Send Classpath Notifications(85)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2021-01-14 17:23:42.940
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.hcmpRxXc => OK
+
+!ENTRY org.eclipse.ui 2 2 2021-01-14 17:23:46.200
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
