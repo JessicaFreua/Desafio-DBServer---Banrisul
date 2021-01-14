@@ -1,0 +1,26 @@
+package desafiodb;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TesteAdicionaProdutoNoCarrinho {
+
+	private static AdicionaProdutoNoCarrinho product;
+	private static WebDriver driver;
+	
+	@BeforeClass
+	public static void preCondicao() {
+		System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://automationpractice.com/index.php");
+		product = new AdicionaProdutoNoCarrinho(driver);
+	}
+	
+	@Test
+	public void deveAdicionarProdutoNoCarrinho() {
+		product.selecionaProduto(driver);
+
+	}
+}

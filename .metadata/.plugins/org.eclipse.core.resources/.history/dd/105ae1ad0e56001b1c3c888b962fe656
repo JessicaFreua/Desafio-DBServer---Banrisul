@@ -1,0 +1,19 @@
+package desafiodb;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Janelas {
+
+	@Test
+	public void testeComJanelas() {
+		System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://toolsqa.com/automation-practice-switch-windows/");
+		System.out.println(driver.getWindowHandle());
+		driver.quit();
+	}
+
+}

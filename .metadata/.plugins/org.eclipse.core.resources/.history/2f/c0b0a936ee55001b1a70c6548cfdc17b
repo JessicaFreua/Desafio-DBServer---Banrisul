@@ -1,0 +1,28 @@
+package desafiodb;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Teste1111 {
+
+WebDriver driver;
+	
+	@Before
+	public void preCondicao() {
+		System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://www.automationpractice.com");
+		driver.manage().window().maximize();
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys("jessicafreua@teste2.com");
+		driver.findElement(By.id("SubmitCreate")).click();
+	}
+	
+	@Test
+	public void iniciaCadastro() {
+		driver.findElement(By.id("firstname")).sendKeys("teste");
+	}
+}

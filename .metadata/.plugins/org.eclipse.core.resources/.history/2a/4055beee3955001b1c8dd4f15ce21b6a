@@ -1,0 +1,21 @@
+package desafiodb;
+
+import org.junit.Before;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CadastroDafiti {
+	
+WebDriver driver;
+	
+	@Before
+	public void antes() {
+		System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://www.dafiti.com");
+		driver.findElement(By.linkText("http://secure.dafiti.com.br/customer/account/home/")).click();
+		
+	}
+
+}

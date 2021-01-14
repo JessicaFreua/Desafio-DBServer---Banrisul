@@ -1,0 +1,46 @@
+package desafiodb;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class CadastroAutomationPractice {
+
+	WebDriver driver;
+	
+	public CadastroAutomationPractice(WebDriver driver) {
+		this.driver = driver;
+	}
+	
+	public CadastroAutomationPractice preencheEmailInicial(String email) {
+		WebElement caixaEmail = driver.findElement(By.id("email_create"));
+		caixaEmail.sendKeys("jessicafreua@teste2.com");
+		caixaEmail.submit();
+		return this;
+	}
+	
+	public CadastroAutomationPractice preencheNome(String nome) {
+		driver.findElement(By.id("customer_firstname")).sendKeys(nome);
+		return this;
+	}
+	
+	public CadastroAutomationPractice preencheSobrenome(String sobrenome) {
+		driver.findElement(By.id("customer_lastname")).sendKeys(sobrenome);
+		return this;
+	}
+	
+		
+	public CadastroAutomationPractice preencheSenha(String senha) {
+		driver.findElement(By.className("is_required validate account_input form-control")).sendKeys(senha);
+		return this;
+	}
+	
+		
+	//public void clicaBotaoEntrar() {
+		//driver.findElement(By.id("u_0_b")).click();
+//	}
+	
+	//public void logarComo(String user, String pass) {
+	//	preencheUsuario(user).preencheSenha(pass).clicaBotaoEntrar();
+	//}
+}

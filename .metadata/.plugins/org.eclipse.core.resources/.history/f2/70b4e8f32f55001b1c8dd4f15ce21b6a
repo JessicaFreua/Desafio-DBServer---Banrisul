@@ -1,0 +1,33 @@
+package desafiodb;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CadastroFacebookTest {
+	
+	WebDriver driver;
+	
+	@Before
+	public void antes() {
+		System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://www.facebook.com");
+		
+	}
+	
+	@Test
+	public void cadastroFacebookComSucesso() throws InterruptedException {
+		driver.findElement(By.name("firstname")).sendKeys("João");
+		driver.findElement(By.name("lastname")).sendKeys("da Silva");
+		driver.findElement(By.name("reg_email__")).sendKeys("joaosilva@teste.com.br");
+		driver.findElement(By.name("reg_email_confirmation__")).sendKeys("joaosilva@teste.com.br");
+		driver.findElement(By.name("reg_passwd__")).sendKeys("senhaDoJoao123.");
+		
+		
+	}
+	
+
+}

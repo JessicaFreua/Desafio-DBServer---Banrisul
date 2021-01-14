@@ -1,0 +1,21 @@
+package desafiodb;
+
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CadastroFacebookTest {
+	
+	WebDriver driver;
+	
+	@Before
+	public void antes() {
+		System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://www.facebook.com");
+		
+	}
+	
+	
+
+}

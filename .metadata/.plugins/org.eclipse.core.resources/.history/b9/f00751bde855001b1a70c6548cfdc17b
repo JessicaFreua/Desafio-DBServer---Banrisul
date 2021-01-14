@@ -1,0 +1,35 @@
+package desafiodb;
+
+import org.junit.After;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TesteCadastroAutomationPractice {
+
+	private static CadastroAutomationPractice practice;
+	private static WebDriver driver;
+	
+	@BeforeClass
+	public static void preCondicao() {
+		System.setProperty("webdriver.chrome.driver", "c:/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation");
+		practice = new CadastroAutomationPractice(driver);
+	}
+	
+	@Test
+	public void deveAcessarCadastro() {
+		driver.findElement(By.className("login")).click();
+		driver.findElement(By.id("email_create")).sendKeys("jessicafreua@teste.com");
+		driver.findElement(By.id("SubmitCreate")).click();
+	}
+	
+	@Test
+	public void deveCadastrarNome() {
+		practice.preencheNome("teste");
+	}
+	
+}
